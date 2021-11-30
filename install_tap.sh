@@ -3,19 +3,19 @@
 
 if [ $(apt list --installed | grep python3-setuptools | wc -l) -lt 1 ]
 then
-echo "Warning! python3-setuptools not installed! Would you like to install now? (y/n)"
-read answer
-if [ "$answer" = "yes" ] || [ "$answer" = "y" ]; 
-then 
-sudo apt update 
-sudo apt install python3-setuptools
-else 
-echo "You answered no! Aborting!"
-exit 1
-fi
-:
+    echo "Warning! python3-setuptools not installed! Would you like to install now? (y/n)"
+    read answer
+    if [ "$answer" = "yes" ] || [ "$answer" = "y" ];
+    then
+        sudo apt update
+        sudo apt install python3-setuptools
+    else
+        echo "You answered no! Aborting!"
+        exit 1
+    fi
+    :
 else
-:
+    :
 fi
 
 # Clone tap
