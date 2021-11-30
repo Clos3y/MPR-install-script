@@ -1,6 +1,7 @@
 #!/bin/dash
 
-# Add makedeb repo
+
+# Add makedeb repo (from https://makedeb.hunterwittenborn.com/home/installing/apt-repository/ inline with GPL v1.3 license)
 wget -qO - 'https://proget.hunterwittenborn.com/debian-feeds/makedeb.pub' | \
 gpg --dearmor | \
 sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null
@@ -8,24 +9,8 @@ sudo tee /usr/share/keyrings/makedeb-archive-keyring.gpg &> /dev/null
 echo 'deb [signed-by=/usr/share/keyrings/makedeb-archive-keyring.gpg arch=all] https://proget.hunterwittenborn.com/ makedeb main' | \
 sudo tee /etc/apt/sources.list.d/makedeb.list
 
+# Update repos
 sudo apt update
 
+# Install makedeb stable
 sudo apt install makedeb
-
-# Install tap
-git clone https://mpr.hunterwittenborn.com/tap.git
-cd tap/
-makedeb -si
-
-tap install tap
-tap update
-
-cd
-
-sudo rm -rf tap/
-
-# Remove makedeb repo
-sudo rm /etc/apt/sources.list.d/makedeb.list
-
-# Install makedeb from tap
-tap install makedeb
