@@ -1,4 +1,4 @@
-# MPR-install-script
+# MPR Installer Script
 A script to install `makedeb` and an MPR helper (either `tap` or `stoke` at present) for accessing the makedeb package repository (a.k.a. debian user repository)
 
 ## Prerequisites
