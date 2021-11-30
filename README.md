@@ -14,4 +14,4 @@ A script to install `makedeb` and an MPR helper (either `tap` or `stoke` at pres
 ```
 #: chmod +x installer.sh
 ```
-or run it using your preferred shell. The rest of the script will explain itself.
+or run it using your preferred shell (it is intended to be run with `dash`). The rest of the script will explain itself.
