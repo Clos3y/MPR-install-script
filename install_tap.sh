@@ -13,6 +13,7 @@ else
 echo "You answered no! Aborting!"
 exit 1
 fi
+:
 else fi
 
 # Clone tap
