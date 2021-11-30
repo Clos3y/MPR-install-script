@@ -15,8 +15,6 @@ fi
 else 
 :
 fi
-:
-fi
 
 echo "Installing makedeb stable"
 
