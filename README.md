@@ -1,4 +1,6 @@
 # MPR Installer Script
+**N.B.: `stoke` is at present not working due to an issue in `makedeb` stable (it would seem, see [here](https://github.com/makedeb/makedeb/pull/62))**
+
 A script to install `makedeb` and an MPR helper (either `tap` or `stoke` at present) for accessing the makedeb package repository (a.k.a. debian user repository)
 
 ## Prerequisites
