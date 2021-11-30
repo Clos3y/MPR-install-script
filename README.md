@@ -12,6 +12,6 @@ A script to install `makedeb` and an MPR helper (either `tap` or `stoke` at pres
 1. Clone the repository to your system via `git clone https://github.com/Clos3y/MPR-install-script.git` and enter the directory
 2. Either make the `installer.sh` executable via
 ```
-#: chmod +x installer.sh
+# chmod +x installer.sh
 ```
 or run it using your preferred shell (it is intended to be run with `dash`). The rest of the script will explain itself.
