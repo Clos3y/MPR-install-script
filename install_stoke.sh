@@ -1,6 +1,6 @@
 #!/bin/dash
 
-# Clone tap
+# Clone stoke
 git clone https://mpr.hunterwittenborn.com/stoke-git.git
 
 # Enter directory
@@ -12,7 +12,7 @@ makedeb -si
 # Leave directory
 cd ..
 
-# Install tap through tap (essential before anything else)
+# Install stoke through stoke (essential before anything else)
 stoke install stoke
 
 sudo rm -rf stoke-git/
