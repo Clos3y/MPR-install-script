@@ -1,18 +1,27 @@
 #!/bin/dash
 
+if [ apt list --installed | grep build-essential | wc -l -lt 1 ]
+then
+echo "Warning! build-essential not installed! Aborting!"
+exit 1
+else
+fi
+
 echo "Installing makedeb stable"
 
-exec dash install_makedeb.sh
+dash install_makedeb.sh
+
+clear
 
 echo "Would you prefer tap (1, default) or stoke (2) as your MPR helper?"
 
 read mpr_helper
 
-if [$mpr_helper = 2] || [$mpr_helper = "stoke"]
+if [ $mpr_helper = 2] || [ $mpr_helper = "stoke"]
 then
-exec dash install_stoke.sh
+dash install_stoke.sh
 else 
-exec dash install_tap.sh
+dash install_tap.sh
 fi
 
 # Tidying
